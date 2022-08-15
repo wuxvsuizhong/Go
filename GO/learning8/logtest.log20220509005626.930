@@ -1,0 +1,133 @@
+[2022-05-05 00:56:21] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:21] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:21] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:21] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:21] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:21] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:21] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:21] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:21] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:21] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:21] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:21] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:21] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:21] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:21] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:21] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:21] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:22] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:22] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:22] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:22] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:22] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:22] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:22] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:22] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:22] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:22] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:22] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:22] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:22] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:22] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:22] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:22] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:22] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:22] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:22] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:22] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:22] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:22] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:22] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:22] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:22] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:23] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:23] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:23] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:23] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:23] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:23] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:23] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:23] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:23] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:23] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:23] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:23] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:23] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:23] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:23] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:23] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:23] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:23] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:23] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:23] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:23] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:23] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:23] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:23] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:23] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:24] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:24] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:24] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:24] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:24] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:24] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:24] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:24] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:24] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:24] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:24] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:24] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:24] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:24] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:24] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:24] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:24] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:24] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:24] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:24] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:25] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:25] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:25] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:25] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:25] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:25] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:25] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:25] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:25] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:25] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:25] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:25] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:25] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:25] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:25] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:25] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:25] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:25] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:25] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:25] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:25] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:25] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:25] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:25] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:25] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:26] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:26] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:26] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:26] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:26] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:26] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:26] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:26] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:26] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:26] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:26] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:26] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:26] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:26] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:26] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:26] [INFO] [main.go:testFilelog:30]-- info 字符串
+[2022-05-05 00:56:26] [WARNING] [main.go:testFilelog:32]-- warning 字符串
+[2022-05-05 00:56:26] [ERROR] [main.go:testFilelog:33]-- error 字符串
+[2022-05-05 00:56:26] [FATAL] [main.go:testFilelog:34]-- fatal 字符串
+[2022-05-05 00:56:26] [INFO] [main.go:testFilelog:37]-- info 消息日志 10086:中国移动
+[2022-05-05 00:56:26] [INFO] [main.go:testFilelog:30]-- info 字符串

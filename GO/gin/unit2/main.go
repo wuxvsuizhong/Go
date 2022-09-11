@@ -20,5 +20,8 @@ func main() {
 	// ParseFormDataAsJson()
 
 	//按照json格式解析Uri中的字段参数
-	ParseUriParamsAsJson()
+	// ParseUriParamsAsJson()
+
+	//按照各种格式响应请求
+	ResponseAsFormat()
 }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>gin表单demo</title>
+</head>
+<body>
+	<form action="/upload_post" method="post" enctype="multipart/form-data">
+		头像:
+    <input type="file" name="file">
+		<br>
+		<input type="submit" value="提交">
+	</form>
+  <br>
+  <br>
+  <form action="/uploads_post" method="post" enctype="multipart/form-data">
+		上传多个文件:
+<!--    input控件添加mutilple 参数即可上传多个文件-->
+    <input type="file" name="files" multiple>
+		<br>
+		<input type="submit" value="提交">
+	</form>
+</body>
+</html>

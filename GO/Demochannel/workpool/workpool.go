@@ -22,6 +22,7 @@ type result struct {
 }
 
 func producer(jobchan chan<- *goods) {
+	//入参限定通道为只写通道
 	//循环生成int64并发送到jobchan
 	wg.Done() //不会执行，因为for死循环
 	for {
@@ -33,6 +34,7 @@ func producer(jobchan chan<- *goods) {
 }
 
 func consumer(jobchan <-chan *goods, resultchan chan<- *result) {
+	//入参限定jobchan为只读，resultchan为只写
 	//从jobchan 中不断取出元素并处理计算
 	wg.Done() //不会执行，因为for死循环
 	for {

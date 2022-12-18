@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 )
 
@@ -14,10 +15,11 @@ func main1() {
 
 */
 func main() {
-	var a chan<- chan error
-
+	var a chan error
+	a = make(chan error, 1)
 	// a <- 100
-	a <- chan error
 
+	a <- errors.New("NG")
+	//fmt.Println(er
 	fmt.Println(a)
 }

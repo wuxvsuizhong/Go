@@ -15,5 +15,5 @@ func main() {
 		_, _ = ioutil.ReadAll(resp.Body)
 
 	}
-	fmt.Printf("goroutine个数%d\n", runtime.NumGoroutine())
+	fmt.Printf("gin goroutine个数%d\n", runtime.NumGoroutine())
 }

@@ -1,11 +1,13 @@
 package useinterface
-import(
+
+import (
 	"fmt"
 	"mypro/getfuncinfo"
 )
 
 //单独一个interface只是关键字而已
 //interface{} 才是空接口类型
+// 空接口可以看成是一种泛型
 
 func TestEmpyInter(){
 	getfuncinfo.PrintFuncName()
@@ -32,7 +34,7 @@ func show(a interface{}){
 func Typeassert(a interface{}){
 	getfuncinfo.PrintFuncName()
 	fmt.Printf("%T\n",a)
-	str,ok := a.(string)
+	str,ok := a.(string)   //断言传入的参数a是一个字符串
 	if !ok{
 		fmt.Println("不是字符串，猜测错误!\n")
 	}else{

@@ -1,5 +1,6 @@
 package useinterface
-import(
+
+import (
 	"fmt"
 	"mypro/getfuncinfo"
 )
@@ -22,7 +23,7 @@ type newcat struct{
 	name string
 }
 
-//无论interface如何嵌套，struct只需实现最终的接口即可
+//无论interface如何嵌套，struct只需实现接口中最终定义的方法即可
 func (nc newcat)run(){
 	fmt.Printf("%s在跑~\n",nc.name)
 }

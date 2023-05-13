@@ -21,6 +21,7 @@ func main(){
 	useinterface.Typeassert2("asjdgflkasdf")
 	useinterface.Typeassert2(false)
 	useinterface.Typeassert2(int64(1000))
+	useinterface.TestCallInterfaceFuncByStructMethod()
 
 
 }

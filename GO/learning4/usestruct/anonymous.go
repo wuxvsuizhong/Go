@@ -8,7 +8,7 @@ type person struct{
 	//int
 	//匿名变量不能同时存在多个
 }
-//匿名变量在结构体中只能单一的存在
+//匿名变量在结构体中只能单一的存在，访问时使用结构体的实例名.int 访问，如 vat p person; fmt.Println(p.int)
 
 
 func TestAnonymous(){

@@ -3,6 +3,8 @@ import(
 	"mypro/getfuncinfo"
 	"fmt"
 )
+
+// 定义一个接口animal
 type animal interface{
 	move()
 	eat(sth string)

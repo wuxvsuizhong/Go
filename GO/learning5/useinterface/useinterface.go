@@ -1,5 +1,6 @@
 package useinterface
-import(
+
+import (
 	"fmt"
 	"mypro/getfuncinfo"
 )
@@ -15,7 +16,7 @@ type falali struct {
 
 //结构体对象实现接口
 func (f falali) run() {
-	fmt.Printf("%s 在跑，速度70迈~\n",f.brand)
+	fmt.Printf("%s 在跑,速度70迈~\n",f.brand)
 }
 
 
@@ -24,7 +25,7 @@ type baoshijie struct {
 }
 //结构体对象实现接口
 func (b baoshijie) run() {
-	fmt.Printf("%s 在跑，速度100迈~\n",b.brand)
+	fmt.Printf("%s 在跑,速度100迈~\n",b.brand)
 }
 
 //访问接口的入口

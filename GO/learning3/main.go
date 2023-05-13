@@ -1,12 +1,12 @@
 package main
-import(
+
+import (
 	"fmt"
-	"mypro/myErrProcess"
 	"mypro/datastruct"
+	"mypro/myErrProcess"
 )
 
-
-func main(){
+func main() {
 	//err_process()
 	datastruct.TestDataStruct()
 	//datastruct.TestDatastru2()
@@ -22,31 +22,30 @@ func main(){
 	datastruct.TestSliceCopy()
 	datastruct.TestUseMap()
 	datastruct.TestMapAttr()
+	datastruct.TestSliceChange()
+	datastruct.TestSliceChange2()
+	datastruct.ChangeStringBySlice()
 }
 
-
-
-func err_process(){
+func err_process() {
 	//defer + 匿名函数的调用 可以捕获并处理错误
-	defer func(){
+	defer func() {
 		//启用recover匿名函数可以捕获错误
 		err := recover()
 		//若错误不为0
-		if err != nil{
+		if err != nil {
 			fmt.Println("捕获到错误.")
-			fmt.Println("err 是:",err)
+			fmt.Println("err 是:", err)
 		}
 	}()
 
 	var num1 int = 100
 	var num2 int = 10
-	fmt.Printf("%v/%v=%v\n",num1,num2,num1/num2)
+	fmt.Printf("%v/%v=%v\n", num1, num2, num1/num2)
 
 	num2 = 0
 
-	fmt.Printf("%v/%v=%v\n",num1,num2,num1/num2)
+	fmt.Printf("%v/%v=%v\n", num1, num2, num1/num2)
 
-	myErrProcess.TestMyErr(1000,0)
+	myErrProcess.TestMyErr(1000, 0)
 }
-
-

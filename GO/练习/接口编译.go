@@ -15,5 +15,5 @@ type person struct {
 
 func main() {
 	var w worker = person{name: "张三"}
-	fmt.Println(w)
+	fmt.Println(w) //{张三 <nil>}
 }

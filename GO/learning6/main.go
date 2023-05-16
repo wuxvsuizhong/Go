@@ -1,12 +1,12 @@
 package main
-import(
+
+import (
 	"mypro/fileop"
 	"mypro/getinput"
 	"mypro/usetime"
 )
 
-
-func main(){
+func main() {
 	fileop.TestFileRead()
 	fileop.TestBufio()
 	fileop.TestIoutil()
@@ -18,4 +18,7 @@ func main(){
 	getinput.GetInputByBufio()
 	usetime.TestTime()
 	usetime.TestTimeSub()
+
+	fileop.TestCopyFile()
+	fileop.CharactersCount()
 }

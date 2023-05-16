@@ -17,7 +17,7 @@ func main() {
 	switch test(key) + 1 { //switch计算的是表达式的最终的值
 	//case结束不用加break
 	case 'a':
-		fmt.Println("捕获到a") //输入䘝自负的时候不会被执行到，及时输入最小的a,表达式计算结果都会是'a' + 2 = 'c'
+		fmt.Println("捕获到a") //输入单个字符的时候不会被执行到，及时输入最小的a,表达式计算结果都会是'a' + 2 = 'c'
 	case 'b':
 		fmt.Println("捕获到b")
 	case 'c':
@@ -77,9 +77,8 @@ func main() {
 	}
 
 	/*
-		switch 穿透——fallthrough
+		switch 穿透————fallthrough
 	*/
-
 	//var num int = 10
 	var num int = 20
 	switch num {

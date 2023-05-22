@@ -15,6 +15,15 @@ func main() {
 	fmt.Println("-------------------")
 	usechannel.Start4()
 	fmt.Println("-------------------")
+
+	fmt.Println("-------------------")
+	usechannel.Start5()
+
+	fmt.Println("-------------------")
+	usechannel.TwoChanneReadWrite()
+
+	//循环运行线程池
 	workpool.Start()
 	fmt.Println("__________end__________")
+
 }

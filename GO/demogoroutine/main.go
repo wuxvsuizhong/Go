@@ -2,6 +2,7 @@ package main
 
 import (
 	"demogoroutine/DemoMAXPROCS"
+	"demogoroutine/DemoMAXPROCS/goroutineErrProcess"
 	"fmt"
 	"math/rand"
 	"sync"
@@ -65,4 +66,6 @@ func main() {
 	wg.Done()
 
 	wg.Wait() //等待计数为0再退出main
+
+	goroutineErrProcess.ErrorExample()
 }

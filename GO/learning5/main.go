@@ -32,5 +32,10 @@ func main() {
 	useinterface.DiffBwtweenInheritAndInterface()
 	//多态数组
 	useinterface.PolymorphicSlice()
-
+	//json序列化
+	jsontrans.SliceMarshal()
+	//str反序列化为map
+	jsontrans.UnmarshalMap()
+	//反序列化为slice
+	jsontrans.Unmarshal2Slice()
 }

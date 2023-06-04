@@ -6,15 +6,6 @@ import (
 )
 
 func main1() {
-	var i int32 = 100
-
-	var n1 float32 = float32(i)
-	var n2 int8 = int8(i)
-	var n3 int64 = int64(i) //低精度转高精度
-
-	fmt.Printf("i=%v n1=%v n2=%v n3=%v\n", i, n1, n2, n3)
-	//转换的时候源值的类型不会改变，只是把转换的结果给了新的值
-	fmt.Printf("i 的类型 %T, n1的类型 %T \n", i, n1) //i的类型仍然是int32,
 
 	var num1 int64 = 99999
 	var num2 int8 = int8(num1)
@@ -68,7 +59,7 @@ func main() {
 	var num2 float64 = 23.456
 	var str string
 
-	str = strconv.FormatInt(int64(num1), 10) //第二个参数时进制，10就是转成10机制，2就是转成2进制
+	str = strconv.FormatInt(int64(num1), 10) //第二个参数是进制，10就是转成10机制，2就是转成2进制
 	fmt.Printf("str的类型是 %T, str=%q\n", str, str)
 
 	str = strconv.Itoa(int(num2)) //另外一种int转string方式，参数只能int类型
@@ -78,5 +69,4 @@ func main() {
 	//除了'f'之外，其他格式如下：
 	//'f'（-ddd.dddd）、'b'（-ddddp±ddd，指数为二进制）、'e'（-d.dddde±dd，十进制指数）、'E'（-d.ddddE±dd，十进制指数）、'g'（指数很大时用'e'格式，否则'f'格式）、'G'（指数很大时用'E'格式，否则'f'格式）。
 	fmt.Printf("str的类型是 %T, str=%q\n", str, str)
-
 }

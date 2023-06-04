@@ -35,15 +35,17 @@ func main() {
 		qq.PushBack(nn)
 	}
 
-	//for e := qq.Front(); e != nil; e = e.Next() {
-	//	fmt.Println(e.Value)
-	//	v := e.Value.(node2)
-	//	fmt.Printf("address:%p\n", &v.nums[0])
-	//}
+	for e := qq.Front(); e != nil; e = e.Next() {
+		fmt.Println(e.Value)
+		v := e.Value.(node2)
+		fmt.Printf("address:%p\n", &v.nums[0])
+	}
 
+	fmt.Println("-------------------------")
 	for e := q.Front(); e != nil; e = e.Next() {
 		//fmt.Println(e.Value)
+		fmt.Println(e.Value)
 		v := e.Value.(node)
-		fmt.Printf("%s,address:%p\n", string(v.chars), &v.chars[0])
+		fmt.Printf("%s,chars address:%p,chars pointer to address:%p\n", string(v.chars), &v.chars, &v.chars[0])
 	}
 }

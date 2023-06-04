@@ -9,8 +9,12 @@ func main() {
 	sum := 0
 	for i, n := range nums {
 		i = 6
-		// fmt.Println(i)
+		fmt.Println(i, n)
 		sum += n
 	}
 	fmt.Println(sum)
 }
+
+/*
+修改range迭代返回的序号i不会有range遍历有任何影响，range每次返回的value值不会受影响
+*/

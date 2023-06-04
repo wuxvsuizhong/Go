@@ -45,5 +45,4 @@ func InheritIntefaceHasSameMethod() {
 	var ci CC
 	ci = f
 	ci.test01()
-
 }

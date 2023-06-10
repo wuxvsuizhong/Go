@@ -34,9 +34,9 @@ func CharactersCount() {
 		for _, c := range s {
 			//fmt.Println(c)
 			/*
-				      	switch c 会报错
-								此处swotch后不能添加条件c，因为case 是按照值byte码大小来比较的，计算结果是bool类型，而c是byte类型，二者不匹配，编译不通过；
-								此处直接用switch相当于转为 if ... else if ...的用法
+				switch c 会报错
+				此处swotch后不能添加条件c，因为case 是按照值byte码大小来比较的，计算结果是bool类型，而c是byte类型，二者不匹配，编译不通过；
+				此处直接用switch相当于转为 if ... else if ...的用法
 			*/
 			switch {
 			case c >= 'a' && c <= 'z':

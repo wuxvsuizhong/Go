@@ -24,8 +24,15 @@ func TestAddUp(t *testing.T) {
 testing框架实际是替换了main函数，然后由框架把以Test开头的函数自动加入到一个内置的main函数中去运行
 测试时也可以直接使用go test命令，这个如果运行正确，则没有日志，错误时会有日志，如果带上-v参数那么正确和错误的日志都会输出
 
+<<<<<<< HEAD
 如果模块下有多个_test.go的测试文件，那么test go 会默认执行所有测试函数。
 如果执行执行测试某和单独的_test.go，那么需要指定_test.go文件名，并带上要测试的功能函数的原文件，命令为：go test -v sub_test.go sub.go
 
 如果要只是测试单个方法时，go test后带上-test.run参数然后带上要测试的函数名即可，如命令go test -v --test.run TestSubfunc 只测试TestSubFunc这个函数
+=======
+如果模块下有多个xxx_test.go的测试文件，那么go test会默认执行所有测试函数。
+如果要执行测试某个单独的xxx_test.go，那么需要明确指定xxx_test.go文件名，并带上要测试的功能函数的原文件xxx.go，命令为：go test -v sub_test.go sub.go
+
+如果要只是测试单个方法时，go test后带上--test.run参数然后带上要测试的函数名即可，如命令go test -v --test.run TestSubfunc 只测试TestSubFunc这个函数
+>>>>>>> dev
 */

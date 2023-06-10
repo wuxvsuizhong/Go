@@ -3,6 +3,7 @@ package useinterface
 import (
 	"fmt"
 	"math/rand"
+	"mypro/getfuncinfo"
 	"sort"
 )
 
@@ -39,6 +40,7 @@ func (hl HeroList) Swap(i, j int) {
 //Len,Less,Swap三个方法都实现以后，就意味着实现了Inerface接口
 
 func HeroSort() {
+	getfuncinfo.PrintFuncName()
 	var heros HeroList
 	for i := 0; i < 10; i++ {
 		hero := Hero{

@@ -58,7 +58,11 @@ func CheckStruct(b interface{}) {
 
 	/*
 	   通过reflect.Value的Method方法，传入方法的序号获取到结构体的某个方法，在用Call发起调用
+<<<<<<< HEAD
 	   结构体的方法的顺序是按照函数的ASCII排序的，从偶开始计，所以这里其实是调用的Monster的第二个方法Print()
+=======
+	   结构体的方法的顺序是按照函数的ASCII排序的，从0开始计，所以这里其实是调用的Monster的第二个方法Print()
+>>>>>>> dev
 	*/
 	refVal.Method(1).Call(nil) //即使不传参数，也要写一个nil掺入
 

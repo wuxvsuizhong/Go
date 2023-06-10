@@ -14,11 +14,12 @@ func main() {
 	fileop.TestBufioWr()
 	fileop.TestIoutilWR()
 
-	//getinput.GetInput()
 	getinput.GetInputByBufio()
 	usetime.TestTime()
 	usetime.TestTimeSub()
 
 	fileop.TestCopyFile()
 	fileop.CharactersCount()
+
+	getinput.GetInput()
 }

@@ -18,5 +18,8 @@ func main() {
 	const NUM = 100
 	//对于const类型，强制转换可以
 	fmt.Println("const trans", int(NUM))
-
+	fmt.Printf("NUM的类型：%T\n", NUM)
+	rnum := float32(NUM)
+	fmt.Printf("const trans:%f\n", rnum)
+	fmt.Printf("NUM的类型：%T\n", NUM)
 }

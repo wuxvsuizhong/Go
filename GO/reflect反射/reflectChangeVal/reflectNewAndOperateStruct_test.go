@@ -25,7 +25,11 @@ func TestCreateAndOperateStruct(t *testing.T) {
 
 	elem = reflect.New(reftype)
 	//new 返回一个reflect.Value类型值,该值是一个指针,指向一片新申请的结构体内存区(因为reftype的type是*reflectChangeVal.user2)
+<<<<<<< HEAD
 	//new 能通过model的指针类型，直接创建其指针指代的结构体类型的实体内存，这就实现了通过reflrect创建结构体实例
+=======
+	//new 能通过去Elem后的实体数据类型，直接创建其结构体类型的实体内存，这就实现了通过reflrect创建结构体实例
+>>>>>>> dev
 	t.Log("reflect.New:", elem.Kind().String())             //ptr
 	t.Log("reflect.New.Elem:", elem.Elem().Kind().String()) //struct
 	t.Log("reflect.New.elem.type:", elem.Type().String())   //*reflectChangeVal.user2
@@ -36,3 +40,11 @@ func TestCreateAndOperateStruct(t *testing.T) {
 	elem.FieldByName("Name").SetString("nikkaname")
 	t.Log("model model.Name:", model, model.Name) //&{12345678 nikkaname} nikkaname
 }
+<<<<<<< HEAD
+=======
+
+/*
+可见反射中，New是通过Type来创建结构体实例的，这很好理解，因为只有type是带有报名pacakge前缀的，这样能够在全局中，给自定义的结构体
+做全局的唯一类型标识，然后new才知道要创建的是具体哪个包中哪个结构体类型的数据
+*/
+>>>>>>> dev

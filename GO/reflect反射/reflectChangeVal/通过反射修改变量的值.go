@@ -9,7 +9,11 @@ func ChangeValByReflcet(b interface{}) {
 	refVal := reflect.ValueOf(b)
 	fmt.Printf("refVal的kind:%v,type:%v\n", refVal.Kind(), refVal.Type()) //refVal的kind:ptr,type:*int
 
+<<<<<<< HEAD
 	//因为传递的是变量的指针，所以需要使用reflect.Value的Elem方法获取到变量实际的实体空间，否则会导致修改无效
+=======
+	//因为传递的是变量的指针，所以需要使用reflect.Value的Elem方法获取到变量实际的实体空间，否则会导致 修改无效
+>>>>>>> dev
 	refVal.Elem().SetInt(111)
 }
 

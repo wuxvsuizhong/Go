@@ -20,14 +20,15 @@ func Test1() {
 }
 
 func Test2() {
-	for i := 0; i < 50; i++ {
-		go func() { //匿名函数，闭包 ——使用goroutine 并发
-			fmt.Println("hello,test2", i)
-			// 会出现很多的重复输出，因为打印取的是匿名函数外部的变量；
-			// 在输出时可能外循环已经不是刚启动goroutine的时候的外部变量的值了
-			// 并行启动打印时候，有可能是几乎同一时间访问外部循环变量，所以会有很多的形同打印
-		}()
-	}
+	/*
+		for i := 0; i < 50; i++ {
+			go func() { //匿名函数，闭包 ——使用goroutine 并发
+				fmt.Println("hello,test2", i)
+				// 会出现很多的重复输出，因为打印取的是匿名函数外部的变量；
+				// 在输出时可能外循环已经不是刚启动goroutine的时候的外部变量的值了
+				// 并行启动打印时候，有可能是几乎同一时间访问外部循环变量，所以会有很多的形同打印
+			}()
+		}*/
 
 	fmt.Println("_________________")
 	for i := 0; i < 50; i++ {
@@ -54,8 +55,8 @@ func routineWait() {
 }
 
 func main() {
-	// Test1()
-	// Test2()
+	//Test1()
+	Test2()
 	fmt.Println("main func")
 	// time.Sleep(time.Second) //主线程添加延时，防止主线程提前退出
 

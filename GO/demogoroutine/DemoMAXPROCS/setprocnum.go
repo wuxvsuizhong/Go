@@ -2,6 +2,8 @@ package DemoMAXPROCS
 
 import (
 	"fmt"
+	"runtime"
+
 	// "runtime"
 	"sync"
 )
@@ -23,7 +25,7 @@ func worker2() {
 }
 
 func Start() {
-	// runtime.GOMAXPROCS(2) //不设置则默认跑满所有CPU核心
+	runtime.GOMAXPROCS(2) //不设置则默认跑满所有CPU核心
 	sWg.Add(2)
 	go worker1()
 	go worker2()

@@ -14,7 +14,7 @@ func sayHello() {
 
 func test() {
 	/*
-		如果在routine中捕获异常，那么发生panic后会导致整个程序崩溃，
+		如果在主routine中捕获异常，那么发生panic后会导致整个程序崩溃，
 	*/
 	defer func() {
 		if err := recover(); err != nil {

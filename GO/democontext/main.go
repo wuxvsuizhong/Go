@@ -40,6 +40,7 @@ FORLOOP:
 		}
 	}
 
+	fmt.Println("work2 end!")
 }
 
 func childwork2(wg *sync.WaitGroup, ctx *context.Context) {

@@ -72,6 +72,8 @@ func Start5() {
 	for v := range ch {
 		fmt.Println(v)
 	}
+
+	<-ch
 	/*
 		当管道close后，遍历可以正常结束，不会发生死锁
 	*/

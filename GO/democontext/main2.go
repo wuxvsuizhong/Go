@@ -25,11 +25,14 @@ func gen(ctx context.Context) chan int {
 	return dst
 }
 
-func main1() {
+func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel() //cancel() 去通知那些有检测context的goroutine并发程式去退出工作
 
-	for n := range gen(ctx) {
+	nums := gen(ctx)
+	//for n := range gen(ctx) {
+	for n := range nums {
+		//fmt.Printf("channel地址:%p\n", nums)
 		fmt.Println(n)
 		if n == 10 {
 			break //break后，会执行defer的cancel()
@@ -71,7 +74,7 @@ LOOP:
 	// wg.Done()
 }
 
-func main() {
+func main1() {
 	//启动一个context并设置超时时间为100ms
 	ctx, cancal := context.WithTimeout(context.Background(), time.Millisecond*100)
 	var wg sync.WaitGroup
@@ -81,5 +84,4 @@ func main() {
 	cancal() //通知goroutine结束
 	wg.Wait()
 	fmt.Println("over")
-
 }

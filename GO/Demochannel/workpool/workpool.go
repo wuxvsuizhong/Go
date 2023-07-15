@@ -36,7 +36,7 @@ func producer(jobchan chan<- *goods) {
 func consumer(jobchan <-chan *goods, resultchan chan<- *result) {
 	//入参限定jobchan为只读，resultchan为只写
 	//从jobchan 中不断取出元素并处理计算
-	wg.Done() //不会执行，因为for死循环
+	wg.Done() //不会执行，因为for死循环alc
 	for {
 		g := <-jobchan
 		sum := int64(0)

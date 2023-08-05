@@ -2,7 +2,6 @@ package login
 
 import (
 	"chatroom/message"
-	"encoding/binary"
 	"encoding/json"
 	"fmt"
 	"net"
@@ -30,31 +29,23 @@ func Login() (err error) {
 	}
 	msg.Data = string(data)
 
-	msgBytes, err := json.Marshal(msg)
-	if err != nil {
-		fmt.Println("json.Marchal err:", err)
-	}
-	msgLen := uint32(len(msgBytes))
-	var lenBytes = make([]byte, 4)
-	binary.BigEndian.PutUint32(lenBytes, msgLen)
-
-	var wholeBytes []byte
-	wholeBytes = append(wholeBytes, lenBytes...)
-	wholeBytes = append(wholeBytes, msgBytes...)
-
-	n, err := conn.Write(wholeBytes)
-	if err != nil || n != len(wholeBytes) {
-		fmt.Println("conn.Write err:", err)
+	if err = msg.SendPack(conn); err != nil {
+		fmt.Println("SendMsg err:", err)
+		return
 	}
 	//读取响应结果
 	var retPack message.Message
-	err = message.ReadPack(conn, &retPack)
+	err = retPack.ReadPack(conn)
 	if err != nil {
 		fmt.Println("Login message.ReadMsg err:", err)
 	}
+	fmt.Println("收到的服务器的返回pack:", retPack)
 	if retPack.Type == message.LoginMsgRes {
 		var retMsg message.ResultMsg
-		json.Unmarshal([]byte(retPack.Data), retMsg)
+		if err = json.Unmarshal([]byte(retPack.Data), &retMsg); err != nil {
+			fmt.Println("json.Unmarshal err:", err)
+		}
+		fmt.Println("收到的服务器的返回msg:", retMsg)
 		if retMsg.Code != 200 {
 			fmt.Println("登录失败!")
 			return

@@ -8,13 +8,13 @@ import (
 	"net"
 )
 
-func ReadPack(conn net.Conn, msg *Message) (err error) {
+func (msg *Message) ReadPack(conn net.Conn) (err error) {
 	var buf [8192]byte
 	_, err = conn.Read(buf[:4])
 	if err != nil {
 		if err == io.EOF {
-			fmt.Println("客户端断开连接,服务端关闭coekct!")
-			return
+			fmt.Println("socket 断开!")
+			return err
 		}
 		fmt.Println("conn.Read msgLen err:", err)
 		return
@@ -34,7 +34,7 @@ func ReadPack(conn net.Conn, msg *Message) (err error) {
 	return
 }
 
-func SendMsg(conn net.Conn, msg *Message) (err error) {
+func (msg *Message) SendPack(conn net.Conn) (err error) {
 	msgBytes, err := json.Marshal(*msg)
 	if err != nil {
 		fmt.Println("writeMsg json.Marshal err:", err)
@@ -48,6 +48,7 @@ func SendMsg(conn net.Conn, msg *Message) (err error) {
 	wholeMsgBytes = append(wholeMsgBytes, lenBytes[:]...)
 	wholeMsgBytes = append(wholeMsgBytes, msgBytes...)
 
+	fmt.Println("组装发送msg:", wholeMsgBytes)
 	n, err := conn.Write(wholeMsgBytes)
 	if err != nil || n != len(wholeMsgBytes) {
 		fmt.Println("writeMsg conn.Write err:", err)

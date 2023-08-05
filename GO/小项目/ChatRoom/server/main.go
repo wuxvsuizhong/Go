@@ -3,7 +3,6 @@ package main
 import (
 	"chatroom/message"
 	"encoding/json"
-	"errors"
 	"fmt"
 	"net"
 )
@@ -33,14 +32,14 @@ func process(conn net.Conn) {
 		exception := recover()
 		//errText := fmt.Sprintf("serverProcessMsg exception,err:%s", exception)
 		//err = errors.New(errText)
-		fmt.Println("捕获到异常:", exception)
-		return exception.(error)
+		fmt.Println("server捕获到异常:", exception)
+		return err
 	}()
 	defer conn.Close()
 	for {
 		var msg message.Message
 		//err := readMsg(conn, &msg)
-		err := message.ReadPack(conn, &msg)
+		err := msg.ReadPack(conn)
 		if err != nil {
 			fmt.Println("readMsg err:", err)
 			return
@@ -80,14 +79,16 @@ func serverProcessLogin(conn net.Conn, data string) (err error) {
 	}
 	fmt.Println(info)
 
+	var resinfo message.ResultMsg
 	if info.UserId != "100" {
 		//fmt.Println("登录失败!")
-		panic(errors.New("登录失败"))
+		// panic(errors.New("登录失败"))
+		resinfo.Code = 400
+		resinfo.Msg = "登录失败!"
+	} else {
+		resinfo.Code = 200
+		resinfo.Msg = "登录成功!"
 	}
-
-	var resinfo message.ResultMsg
-	resinfo.Code = 200
-	resinfo.Msg = "登录成功!"
 
 	var resMsg message.Message
 	resMsg.Type = message.LoginMsgRes
@@ -97,8 +98,8 @@ func serverProcessLogin(conn net.Conn, data string) (err error) {
 		return
 	}
 	resMsg.Data = string(dataBytes)
-	//返回客户端的登录成功消息
-	if err = message.SendMsg(conn, &resMsg); err != nil {
+	//返回客户端的登录结果消息
+	if err = resMsg.SendPack(conn); err != nil {
 		fmt.Println("serverProcessLogin writeMsg err:", err)
 		return
 	}

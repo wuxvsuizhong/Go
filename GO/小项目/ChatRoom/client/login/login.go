@@ -17,7 +17,7 @@ func Login() (err error) {
 	defer conn.Close()
 
 	var msg message.Message
-	msg.Type = message.LoginType
+	msg.Type = message.LoginMsgType
 
 	var loginInfo message.LoginInfo
 	fmt.Print("请输入用户ID:")
@@ -46,5 +46,23 @@ func Login() (err error) {
 	if err != nil || n != len(wholeBytes) {
 		fmt.Println("conn.Write err:", err)
 	}
+	//读取响应结果
+	var retPack message.Message
+	err = message.ReadPack(conn, &retPack)
+	if err != nil {
+		fmt.Println("Login message.ReadMsg err:", err)
+	}
+	if retPack.Type == message.LoginMsgRes {
+		var retMsg message.ResultMsg
+		json.Unmarshal([]byte(retPack.Data), retMsg)
+		if retMsg.Code != 200 {
+			fmt.Println("登录失败!")
+			return
+		}
+		fmt.Println(retMsg.Msg)
+	} else {
+		fmt.Println("数据错误!,err:")
+	}
+
 	return
 }

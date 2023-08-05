@@ -1,15 +1,17 @@
 package message
 
+type MsgType uint64
+
 const (
-	LoginMsgType    = "LoginMsgType"
-	RegisterMsgType = "RegisterMsgType"
-	LoginType       = "LoginType"
-	ResultMsgType   = "ResultMsgType"
+	LoginMsgType MsgType = iota
+	RegisterMsgType
+	LoginMsgRes
+	ResultMsgRes
 )
 
 type Message struct {
-	Type string `json:"type"`
-	Data string `json:"data"`
+	Type MsgType `json:"type"`
+	Data string  `json:"data"` //具体的message结构体
 }
 
 type LoginInfo struct {
@@ -19,6 +21,6 @@ type LoginInfo struct {
 }
 
 type ResultMsg struct {
-	Code int    `json:"code"`
-	Msg  string `json:"msg"`
+	Code int    `json:"code"` //返回状态码
+	Msg  string `json:"msg"`  //消息体
 }

@@ -19,7 +19,7 @@ func main() {
 	m := make(map[string]*Person)
 	for _, p := range ps { //p只是作为一个临时的加载迭代元素的变量
 		fmt.Println(p.name)
-		m[p.name] = &p //这里会有问题，p每次迭代都是一份切片元素的拷贝,这里是给map元素地址是临时变量的地址，不是[]Person每个元素实际的地址
+		m[p.name] = &p //这里会有问题，p每次迭代都是一份切片元素的拷贝,这里是给map元素地址是临时变量的地址，不是ps每个元素实际的地址
 	}
 
 	fmt.Println(m)

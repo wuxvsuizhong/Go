@@ -1,0 +1,6 @@
+go 1.18
+
+use (
+	./useredis
+	./小项目/ChatRoom
+)

@@ -2,9 +2,11 @@ package main
 
 import (
 	"chatroom/message"
+	"chatroom/redisop"
 	"encoding/json"
 	"fmt"
 	"net"
+	"time"
 )
 
 func main() {
@@ -14,6 +16,8 @@ func main() {
 		return
 	}
 	defer listen.Close()
+	// 初始化redis连接池
+	redisop.InitPool("127.0.0.1:6379", 5, 20, 300*time.Second)
 
 	for {
 		fmt.Println("服务器等待客户端连接...")
@@ -32,8 +36,10 @@ func process(conn net.Conn) {
 		exception := recover()
 		//errText := fmt.Sprintf("serverProcessMsg exception,err:%s", exception)
 		//err = errors.New(errText)
-		fmt.Println("server捕获到异常:", exception)
-		return err
+		if exception != nil {
+			fmt.Println("server捕获到异常:", exception)
+		}
+		return
 	}()
 	defer conn.Close()
 	for {
@@ -80,11 +86,10 @@ func serverProcessLogin(conn net.Conn, data string) (err error) {
 	fmt.Println(info)
 
 	var resinfo message.ResultMsg
-	if info.UserId != "100" {
-		//fmt.Println("登录失败!")
-		// panic(errors.New("登录失败"))
+	_, err = redisop.QueryHashKeyVal("user", info.UserId)
+	if err != nil {
 		resinfo.Code = 400
-		resinfo.Msg = "登录失败!"
+		resinfo.Msg = "没找到用户信息，请先注册!"
 	} else {
 		resinfo.Code = 200
 		resinfo.Msg = "登录成功!"

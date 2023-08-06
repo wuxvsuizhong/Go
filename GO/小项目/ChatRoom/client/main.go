@@ -1,7 +1,7 @@
 package main
 
 import (
-	"chatroom/client/login"
+	clinetrequest "chatroom/client/clientrequest"
 	"fmt"
 )
 
@@ -19,7 +19,7 @@ FORLOOP:
 		switch key {
 		case 1:
 			fmt.Println("登录")
-			login.Login()
+			clinetrequest.Login()
 		case 2:
 			fmt.Println("注册")
 		case 3:
